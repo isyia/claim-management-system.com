@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost/cms/users/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>CMS | User Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./CMS _ User Login_files/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="./CMS _ User Login_files/font-awesome.css" rel="stylesheet">
+        
+    <!-- Custom styles for this template -->
+    <link href="./CMS _ User Login_files/style.css" rel="stylesheet">
+    <link href="./CMS _ User Login_files/style-responsive.css" rel="stylesheet">
+<script type="text/javascript">
+function valid()
+{
+ if(document.forgot.password.value!= document.forgot.confirmpassword.value)
+{
+alert("Password and Confirm Password Field do not match  !!");
+document.forgot.confirmpassword.focus();
+return false;
+}
+return true;
+}
+</script>
+  <script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+      var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+
+      if (!f._avast_submit) {
+        f._avast_submit = f.submit;
+      }
+
+      try {
+        Object.defineProperty(f, "submit", {
+          get() {
+            return function (prev_submit) {
+              prev_submit.call(this);
+
+              if (this._avast_inside_submit) {
+                return;
+              }
+
+              this._avast_inside_submit = true;
+              var evt = document.createEvent("CustomEvent");
+              evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+
+              this.dispatchEvent(evt);
+              delete this._avast_inside_submit;
+            }.bind(this, this._avast_submit);
+          },
+
+          set(submitFunc) {
+            this._avast_submit = submitFunc;
+          }
+
+        });
+      } catch (ex) {// ignored
+      }
+    })();</script></head>
+
+  <body style="">
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+
+	  <div id="login-page">
+	  	<div class="container">
+	  	
+		      <form class="form-login" name="login" method="post">
+		        <h2 class="form-login-heading">sign in now</h2>
+		        <p style="padding-left:4%; padding-top:2%;  color:red">
+		        	</p>
+
+		        		<p style="padding-left:4%; padding-top:2%;  color:green">
+		        	</p>
+		        <div class="login-wrap">
+		            <input type="text" class="form-control" name="username" placeholder="User ID" required="" autofocus="">
+		            <br>
+		            <input type="password" class="form-control" name="password" required="" placeholder="Password">
+		            <label class="checkbox">
+		                <span class="pull-right">
+		                    <a data-toggle="modal" href="http://localhost/cms/users/login.html#myModal"> Forgot Password?</a>
+		
+		                </span>
+		            </label>
+		            <button class="btn btn-theme btn-block" name="submit" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+		            <hr>
+		           
+		            <div class="registration">
+		                Don't have an account yet?<br>
+		                <a class="" href="http://localhost/cms/users/registration.php">
+		                    Create an account
+		                </a>
+		            </div>
+		
+		        </div></form>
+		
+		          <!-- Modal -->
+		           <form class="form-login" name="forgot" method="post">
+		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+		              <div class="modal-dialog">
+		                  <div class="modal-content">
+		                      <div class="modal-header">
+		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		                          <h4 class="modal-title">Forgot Password ?</h4>
+		                      </div>
+		                      <div class="modal-body">
+		                          <p>Enter your details below to reset your password.</p>
+<input type="email" name="email" placeholder="Email" autocomplete="off" class="form-control" required=""><br>
+<input type="text" name="contact" placeholder="contact No" autocomplete="off" class="form-control" required=""><br>
+ <input type="password" class="form-control" placeholder="New Password" id="password" name="password" required=""><br>
+<input type="password" class="form-control unicase-form-control text-input" placeholder="Confirm Password" id="confirmpassword" name="confirmpassword" required="">
+
+		
+		                      </div>
+		                      <div class="modal-footer">
+		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+		                          <button class="btn btn-theme" type="submit" name="change" onclick="return valid();">Submit</button>
+		                      </div>
+		                  </div>
+		              </div>
+		          </div>
+		          <!-- modal -->
+		          </form>
+		
+		      	  	
+	  	
+	  	</div>
+	  </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="./CMS _ User Login_files/jquery.js.download"></script>
+    <script src="./CMS _ User Login_files/bootstrap.min.js.download"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="./CMS _ User Login_files/jquery.backstretch.min.js.download"></script>
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+    </script><div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 533px; width: 1313px; z-index: -999999; position: fixed;"><img src="./CMS _ User Login_files/login-bg.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1313px; height: 984.75px; max-width: none; z-index: -999999; left: 0px; top: -225.875px;"></div>
+
+
+  
+
+</body></html>

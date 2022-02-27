@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost/cms/users/registration.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>CMS | User Registration</title>
+    <link href="./CMS _ User Registration_files/bootstrap.css" rel="stylesheet">
+    <link href="./CMS _ User Registration_files/font-awesome.css" rel="stylesheet">
+    <link href="./CMS _ User Registration_files/style.css" rel="stylesheet">
+    <link href="./CMS _ User Registration_files/style-responsive.css" rel="stylesheet">
+    	<script>
+function userAvailability() {
+$("#loaderIcon").show();
+jQuery.ajax({
+url: "check_availability.php",
+data:'email='+$("#email").val(),
+type: "POST",
+success:function(data){
+$("#user-availability-status1").html(data);
+$("#loaderIcon").hide();
+},
+error:function (){}
+});
+}
+</script>
+  <script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+      var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+
+      if (!f._avast_submit) {
+        f._avast_submit = f.submit;
+      }
+
+      try {
+        Object.defineProperty(f, "submit", {
+          get() {
+            return function (prev_submit) {
+              prev_submit.call(this);
+
+              if (this._avast_inside_submit) {
+                return;
+              }
+
+              this._avast_inside_submit = true;
+              var evt = document.createEvent("CustomEvent");
+              evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+
+              this.dispatchEvent(evt);
+              delete this._avast_inside_submit;
+            }.bind(this, this._avast_submit);
+          },
+
+          set(submitFunc) {
+            this._avast_submit = submitFunc;
+          }
+
+        });
+      } catch (ex) {// ignored
+      }
+    })();</script></head>
+
+  <body style="">
+	  <div id="login-page">
+	  	<div class="container">
+	  	
+		      <form class="form-login" method="post">
+		        <h2 class="form-login-heading">User Registration</h2>
+		        <p style="padding-left: 1%; color: green">
+		        	
+
+		        </p>
+		        <div class="login-wrap">
+		         <input type="text" class="form-control" placeholder="Full Name" name="fullname" required="required" autofocus="">
+		            <br>
+		            <input type="email" class="form-control" placeholder="User ID" id="email" onblur="userAvailability()" name="email" required="required">
+		             <span id="user-availability-status1" style="font-size:12px;"><span style="color:green"> Email available for Registration .</span><script>$('#submit').prop('disabled',false);</script></span>
+		            <br>
+		            <input type="password" class="form-control" placeholder="Password" required="required" name="password"><br>
+		             <input type="text" class="form-control" maxlength="10" name="contactno" placeholder="Contact no" required="required" autofocus="">
+		            <br>
+		            
+		            <button class="btn btn-theme btn-block" type="submit" name="submit" id="submit"><i class="fa fa-user"></i> Register</button>
+		            <hr>
+		            
+		            <div class="registration">
+		                Already Registered<br>
+		                <a class="" href="http://localhost/cms/users/index.php">
+		                   Sign in
+		                </a>
+		            </div>
+		
+		        </div>
+		
+		      
+		
+		      </form>	  	
+	  	
+	  	</div>
+	  </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="./CMS _ User Registration_files/jquery.js.download"></script>
+    <script src="./CMS _ User Registration_files/bootstrap.min.js.download"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="./CMS _ User Registration_files/jquery.backstretch.min.js.download"></script>
+    <script>
+        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+    </script><div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 533px; width: 1313px; z-index: -999999; position: fixed;"><img src="./CMS _ User Registration_files/login-bg.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1313px; height: 984.75px; max-width: none; z-index: -999999; left: 0px; top: -225.875px;"></div>
+
+
+  
+
+</body></html>
